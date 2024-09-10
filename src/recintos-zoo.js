@@ -1,5 +1,6 @@
 import { RecintoRpository } from "./repository/RecintoRepository.js";
 import { AnimalRepository } from "./repository/AnimalRepository.js";
+import { Animal } from "./Animal.js";
 
 class RecintosZoo {
 
@@ -10,8 +11,8 @@ class RecintosZoo {
             this.#animalRepository.create();
             let result = this.#animalRepository.searchAnimal(animal);
             
-            if(!(result.erro instanceof String)){
-                //continuar a implementação aqui
+            if(result instanceof Animal){
+                
             }else{
                 return {
                     erro: result.erro,
@@ -30,7 +31,7 @@ class RecintosZoo {
 }
 
 let r = new RecintosZoo()
-r.analisaRecintos('LEAO', 1);
+r.analisaRecintos('PAPA', 1);
 
 
 export { RecintosZoo as RecintosZoo };
