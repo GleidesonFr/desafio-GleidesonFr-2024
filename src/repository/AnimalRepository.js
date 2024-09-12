@@ -1,5 +1,4 @@
 import { Animal } from "../Animal.js";
-import { AnimalInvalidException } from "../errors/AnimaInvalidException.js";
 
 export class AnimalRepository {
 

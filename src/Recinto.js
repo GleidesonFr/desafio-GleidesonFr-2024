@@ -27,10 +27,13 @@ export class Recinto {
         return this.#totalSize;
     }
 
-    get existingAnimals(){
+    get animals(){
         return this.#exitingAnimals;
     }
 
+    /**
+     * @param {typeof Animal} animal
+     */
     set existingAnimals(animal){
         this.#exitingAnimals.push(animal);
     }
